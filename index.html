@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="pt-br">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Tarefas</title>
+    <!-- css -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- javaScript -->
+    <script src="js/scripts.js" defer></script>
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <!-- link favicon -->
+    <link rel="icon" href="img/lista-de-tarefas.png" type="image/x-icon">
+</head>
+<body>
+    <div class="todo-container">
+        <header>
+            <h1><i class="fa-solid fa-list-check"></i> Lista de Tarefas </h1>
+        </header>
+        <form id="todo-form">
+            <p>Adicione a sua tarefa: </p>
+            <div class="form-control">
+                <input type="text" id="todo-input" placeholder="O que você vai Fazer?">
+                <button type="submit">
+                    <i class="fa-thin fa-plus"></i>
+                </button>
+            </div>
+        </form>
+        <form id="edit-form" class="hide">
+            <p>Edite a sua tarefa:</p>
+            <div class="form-control">
+                <input type="text" id="edit-input">
+                <button type="submit">
+                    <i class="fa-solid fa-check-double"></i>
+                </button>
+            </div>
+            <button id="cancel-edit-btn">Cancelar</button>
+        </form>
+        <div id="todo-list"></div>
+    </div>
+    <div class="fixed">
+        <input type="checkbox" class="checkbox " id="chk">
+
+        <label class="label" for="chk">
+        
+        <i class="fa-solid fa-moon"></i>
+        <i class="fa-solid fa-sun"></i>
+        <div class="ball"></div>
+        
+        </label>
+    </div>
+</body>
+</html>

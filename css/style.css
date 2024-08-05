@@ -1,0 +1,194 @@
+/* Geral */
+*{
+    padding: 0; margin: 0;
+    font-family: Helvetica;
+    color: #333;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+:root{
+    --color-primary: #102f5e;
+}
+
+html, body{
+    background-color: #fafafa;
+    height: 100vh;
+    transition: background 0.2s linear;
+    overflow: auto; 
+}
+body.dark{
+    background-color: black;
+}
+
+button{
+    background-color: #fdfdfd;
+    color: var(--color-primary);
+    border: 2px solid var(--color-primary);
+    padding: .3rem .6rem;
+    font-size: 1rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.4s;
+}
+
+button:hover {
+    background-color: var(--color-primary);
+    color: #fff;
+}
+button:hover > i{
+    color: #fff;
+}
+button i{
+    color: var(--color-primary);
+    font-weight: bold;
+    pointer-events: none;
+}
+input,
+select{
+    padding: 0.25rem 0.5rem;
+}
+.hide{
+    display: none;
+}
+
+/* fim geral */
+
+/* todo header */
+.todo-container{
+    width: 90%;
+    max-width: 500px;
+    margin: 5rem auto;
+    background-color: #fdfdfd;
+    padding: 1.5rem;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgb(163, 147, 147);
+    position: relative;
+    
+}
+.fa-list-check{
+    font-size: 1.8rem;
+    color: var(--color-primary);
+}
+header h1{
+    text-shadow: 0 0 2px var(--color-primary);
+    font-weight: 900;
+    font-style: italic;
+}
+.todo-container header{
+    text-align: center;
+    padding: 0 1rem 1rem;
+    border-bottom: 1px solid #ccc;
+}
+/* fim todo header */
+
+/* todo form */
+#todo-form, #edit-form{
+    padding: 1rem;
+    border-bottom: 1px solid #ccc;
+}
+
+#todo-form p,
+#edit-form p{
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+    font-style: italic;
+}
+
+.form-control{
+    display: flex;
+    
+}
+
+.form-control input{
+    margin-right: 0.3rem;
+    width: 90%;
+}
+#cancel-edit-btn{
+    margin-top: 1rem;
+}
+/* fim todo form */
+
+
+/* todo list */
+
+.todo{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1rem;
+    border-bottom: 1px solid #ddd;
+    transition: .3s;
+    
+}
+
+.todo h3{ 
+    flex: 1;
+    font-size: 0.9rem;
+    font-weight: 500 bold;
+    font-style: italic;
+}
+.todo button{
+    margin-left: 0.4rem;
+}
+.done{
+    background-color: #232c35;
+}
+.done h3{
+    text-shadow: 0 0 5px white;
+    color: #fff;
+    text-decoration:line-through ;
+    font-style: italic;
+}
+/* botao dark */
+.fixed{
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 25px;
+}
+
+.checkbox{
+    opacity: 0;
+    position: absolute;
+}
+.label{
+    background-color:#111 ;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0 0 5px var(--color-primary);
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+    position: relative;
+    height: 26px;
+    width: 50px;
+    transform: scale(1.3);
+}
+
+.label .ball{
+    background-color: #fff;
+    border-radius: 50%;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    height: 22px;
+    width: 22px;
+    transform: translate(0px);
+    transition: transform 0.2s linear;
+}
+
+.checkbox:checked + .label .ball{
+    transform: translate(24px);
+}
+
+.fa-moon{
+    color: #232c35;
+}
+
+.fa-sun{
+    color: yellow;
+}
