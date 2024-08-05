@@ -17,7 +17,7 @@ html, body{
     overflow: auto; 
 }
 body.dark{
-    background-color: black;
+    background-color: #333;;
 }
 
 button{
